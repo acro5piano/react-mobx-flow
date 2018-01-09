@@ -25,12 +25,12 @@ export default class Todo extends React.Component<TodoProps> {
     }
   }
 
-  @action addTodo() {
+  @action addTodo(): void {
     this.props.todoStore.addTodo(this.newTodo)
     this.newTodo = ''
   }
 
-  deleteTodo(index: number) {
+  deleteTodo(index: number): void {
     this.props.todoStore.deleteTodo(index)
   }
 
