@@ -4,15 +4,15 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import { observable, action } from 'mobx'
 
-export interface TodoStore {
-  addTodo: (title: string) => void;
-  deleteTodo: (i: number) => void;
-  todoCount: number;
-  todos: string[];
+type TodoStore = {
+  addTodo: (title: string) => void,
+  deleteTodo: (i: number) => void,
+  todoCount: number,
+  todos: string[],
 }
 
-export interface TodoProps {
-  todoStore: TodoStore;
+type TodoProps = {
+  todoStore: TodoStore,
 }
 
 @observer
